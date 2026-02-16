@@ -16,16 +16,15 @@ if (numeroPar) {
 ===========================================
 */
 
-valorEtanol = 4.50;
-valorGasolina = 5.50;
-combustivelNoMeuCarro = 'etanol';
-kmPorLitroGasolina = 11;
-kmPorLitroEtanol = 8;
-distanciaViagem = 100;
+const valorEtanol = 4.50;
+const valorGasolina = 5.50;
+let combustivelNoMeuCarro = 'etanol';
+const kmPorLitroGasolina = 11;
+const kmPorLitroEtanol = 8;
+const distanciaViagem = 100;
 
-
-valorDaviagemGasolina = (distanciaViagem / kmPorLitroGasolina) * valorGasolina;
-valorDaviagemEtanol = (distanciaViagem / kmPorLitroEtanol) * valorEtanol;
+const valorDaviagemGasolina = (distanciaViagem / kmPorLitroGasolina) * valorGasolina;
+const valorDaviagemEtanol = (distanciaViagem / kmPorLitroEtanol) * valorEtanol;
 
 console.log('Você fará uma viagem de ' + distanciaViagem + ' km, utilizando ' + combustivelNoMeuCarro + ' como combustível.');
 
