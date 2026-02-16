@@ -49,9 +49,15 @@ escreverNome('Débora')
 
 Funçao para conferir a idade
 ===========================================
-*/
 
 function conferenciaDeIdade(idade){
-    const maiorIdad(idade>=18)
-    console.log('Vo
+    if (idade>=18) {
+        console.log('Você é maior de idade!');
+    } else {
+        console.log('Você é menor de idade!');
+} 
 };
+
+conferenciaDeIdade(18);
+conferenciaDeIdade(17);
+*/
