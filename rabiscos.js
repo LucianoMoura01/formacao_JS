@@ -1,6 +1,9 @@
 /*
+Imprimir
+===========================================
 console.log ('bora pra cima papai!');
 
+utilizando if / else
 ===========================================
 
 const numero = 2;
@@ -13,8 +16,8 @@ if (numeroPar) {
     console.log('O número é ímpar');
 }
 
+codigo determinando gastos
 ===========================================
-*/
 
 const valorEtanol = 4.50;
 const valorGasolina = 5.50;
@@ -33,3 +36,22 @@ if (combustivelNoMeuCarro === 'gasolina') {
 } else if (combustivelNoMeuCarro === 'etanol') {
     console.log('O valor da viagem é: ' + valorDaviagemEtanol);
 }
+
+Exercicios de funçoes
+===========================================
+
+function escreverNome(nome){
+    console.log ('Meu nome é ' + nome)
+};
+
+escreverNome('Luciano');
+escreverNome('Débora')
+
+Funçao para conferir a idade
+===========================================
+*/
+
+function conferenciaDeIdade(idade){
+    const maiorIdad(idade>=18)
+    console.log('Vo
+};
