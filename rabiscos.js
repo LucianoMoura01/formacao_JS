@@ -60,4 +60,32 @@ function conferenciaDeIdade(idade){
 
 conferenciaDeIdade(18);
 conferenciaDeIdade(17);
+
+
+Objetos, Classes e Instâncias
+===========================================
+
+class pessoa {
+    nome;
+    idade;
+    dataDeNascimento;
+
+    constructor(nome, dataDeNascimento){
+        this.nome = nome;
+        this.idade = (new Date().getFullYear()) - (new Date(dataDeNascimento).getFullYear());
+        this.dataDeNascimento = dataDeNascimento;
+    }
+
+    descreverPessoa() {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+
+const luciano = new pessoa('Luciano Moura', '1999-10-04');
+const debora = new pessoa('Débora Moura', '1996-12-21');
+
+console.log(luciano);
+debora.descreverPessoa();
+
+===========================================
 */
