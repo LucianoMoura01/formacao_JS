@@ -87,8 +87,8 @@ const debora = new pessoa('Débora Moura', '1996-12-21');
 console.log(luciano);
 debora.descreverPessoa();
 
+
 ===========================================
-*/
 
 class Pessoa {
     nome;
@@ -116,3 +116,23 @@ const luciano = new Pessoa('Luciano', 29);
 const debora = new Pessoa('Débora', 29);
 
 compararPessoas(luciano, debora);
+
+
+===========================================
+*/
+
+class Carro {
+    marca;
+    cor;
+    gastoMedioPorKm;
+
+    constructor(marca, cor, gastoMedioPorKm) {
+        this.marca = marca;
+        this.cor = cor;
+        this.gastoMedioPorKm = gastoMedioPorKm;
+    }
+}
+gastoPercurso(distanciaEmKm, precoCombustivel) {
+    const gastoTotal = (distanciaEmKm * this.gastoMedioPorKm) * precoCombustivel;
+    console.log(`O gasto total para percorrer ${distanciaEmKm} km é de R$ ${gastoTotal.toFixed(2)}`);
+}
