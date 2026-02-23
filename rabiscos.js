@@ -119,20 +119,38 @@ compararPessoas(luciano, debora);
 
 
 ===========================================
-*/
 
 class Carro {
     marca;
+    modelo;
     cor;
     gastoMedioPorKm;
 
-    constructor(marca, cor, gastoMedioPorKm) {
+    constructor(marca, modelo, cor, gastoMedioPorKm) {
         this.marca = marca;
+        this.modelo = modelo;
         this.cor = cor;
         this.gastoMedioPorKm = gastoMedioPorKm;
     }
+    gastoPercurso(distanciaEmKm, precoCombustivel) {
+        const litrosConsumidos = distanciaEmKm / this.gastoMedioPorKm;
+        const gastoTotal = litrosConsumidos * precoCombustivel;
+        console.log(`Com o ${this.marca} ${this.modelo} terá um gasto total para percorrer ${distanciaEmKm} km é de R$ ${gastoTotal.toFixed(2)}`);
+        return gastoTotal;
+    }
 }
-gastoPercurso(distanciaEmKm, precoCombustivel) {
-    const gastoTotal = (distanciaEmKm * this.gastoMedioPorKm) * precoCombustivel;
-    console.log(`O gasto total para percorrer ${distanciaEmKm} km é de R$ ${gastoTotal.toFixed(2)}`);
-}
+
+const clio = new Carro('Renault', 'Clio', 'prata', 12);
+const sandero = new Carro('Renault', 'Sandero Stepway', 'preto', 11);
+const xsara = new Carro('Citroen', 'Xsara', 'preto', 9);
+const escort = new Carro('Ford', 'Escort', 'preto', 6);
+const distanciaEmKm = 360;
+const precoCombustivel = 6.60;
+
+clio.gastoPercurso(distanciaEmKm, precoCombustivel);
+sandero.gastoPercurso(distanciaEmKm, precoCombustivel);
+xsara.gastoPercurso(distanciaEmKm, precoCombustivel);
+escort.gastoPercurso(distanciaEmKm, precoCombustivel);
+
+===========================================
+*/
