@@ -70,7 +70,7 @@ class pessoa {
     idade;
     dataDeNascimento;
 
-    constructor(nome, dataDeNascimento){
+    constructor(nome, idade, dataDeNascimento){
         this.nome = nome;
         this.idade = (new Date().getFullYear()) - (new Date(dataDeNascimento).getFullYear());
         this.dataDeNascimento = dataDeNascimento;
@@ -89,3 +89,30 @@ debora.descreverPessoa();
 
 ===========================================
 */
+
+class Pessoa {
+    nome;
+    idade;
+    dataDeNascimento;
+
+    constructor (nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+        this.dataDeNascimento = (new Date().getFullYear()) - idade;
+    }
+}
+
+function compararPessoas(p1, p2) {
+    if (p1.idade > p2.idade) {
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if (p2.idade > p1.idade) {
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} têm a mesma idade`);
+    }
+}
+
+const luciano = new Pessoa('Luciano', 29);
+const debora = new Pessoa('Débora', 29);
+
+compararPessoas(luciano, debora);
