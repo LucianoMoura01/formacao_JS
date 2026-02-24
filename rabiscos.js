@@ -153,7 +153,7 @@ xsara.gastoPercurso(distanciaEmKm, precoCombustivel);
 escort.gastoPercurso(distanciaEmKm, precoCombustivel);
 
 ===========================================
-*/
+
 
 class Pessoa {
     nome;
@@ -177,3 +177,28 @@ const luciano = new Pessoa('Luciano', 65, 1.80);
 const debora = new Pessoa('Débora', 64, 1.50);
 
 luciano.calcularIMC();
+
+Array
+===========================================
+*/
+
+const Pessoas = [
+    {
+        nome: 'Luciano',
+        peso: 65,
+        altura: 1.80
+    },
+    {
+        nome: 'Débora',
+        peso: 64,
+        altura: 1.50
+    }
+];
+
+function calcularIMC(pessoa) {
+    const imc = pessoa.peso / (pessoa.altura * pessoa.altura);
+    console.log(`O IMC de ${pessoa.nome} é ${imc.toFixed(2)}`);
+    return imc;
+}
+
+Pessoas.forEach(calcularIMC);
