@@ -359,4 +359,22 @@ console.log(`Menor número impar: ${menorNumeroImpar}`);
 
 
 ===========================================
+Imposto sobre Soldo Bruto
+De R$ 0.00 a R$ 1100.00 = 5.00%
+De R$ 1100.01 a R$ 2500.00 = 10.00%
+Acima de R$ 2500.00 = 15.00%
+
+
+const {impostoSobreSoldo, salarioLiquido} = require('./arquivosImport/calculo-imposto');
+
+const salarioBruto = 2000;
+const adicionalBeneficios = 250;
+
+const imposto = impostoSobreSoldo(salarioBruto);
+const salarioFinal = salarioLiquido(salarioBruto, imposto, adicionalBeneficios);
+
+console.log(`O salário líquido é R$ ${salarioFinal.toFixed(2)}, considerando o salário bruto de R$ ${salarioBruto.toFixed(2)}, o imposto de R$ ${imposto.toFixed(2)} e os benefícios adicionais de R$ ${adicionalBeneficios.toFixed(2)}`);
+
+
+===========================================
 */
