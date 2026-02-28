@@ -240,7 +240,7 @@ const media = soma / notas.length;
 console.log(`A média das notas é ${media.toFixed(2)}`);
 
 ===========================================
-*/
+
 
 const brincandoComFor = [1];
 
@@ -253,4 +253,16 @@ for (let i = 0; i <= 1000; i++) {
 
 const somaTudoEMultiplica = soma * brincandoComFor.length;
 console.log(`A soma de todos os números de 0 a 1000 é ${soma} e a multiplicação da soma pela quantidade de números é ${somaTudoEMultiplica}`);
+
+Aprendendo a importar arquivos
+===========================================
+
+
+const {gets, print} = require ('./arquivosImport/aprender-importar');
+
+console.log(gets());
+print('Olá, mundo!');
+
+===========================================
+*/
 
