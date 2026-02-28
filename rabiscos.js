@@ -204,5 +204,53 @@ function calcularIMC(pessoa) {
 Pessoas.forEach(calcularIMC);
 
 ===========================================
+
+
+const alunos = [];
+
+alunos.push('Luciano');
+alunos.push('Débora');
+alunos.push('Maria');
+alunos.push('João');
+alunos.push('José');
+
+console.log(alunos);
+
+
+For / estrutura de repetição
+===========================================
+
+
+const notas = [];
+
+notas.push(8);
+notas.push(7);
+notas.push(9);
+notas.push(6);
+notas.push(10);
+
+let soma = 0;
+
+for (let i = 0; i < notas.length; i++) {
+    const nota = notas[i];
+    soma = soma + nota;
+}
+
+const media = soma / notas.length;
+console.log(`A média das notas é ${media.toFixed(2)}`);
+
+===========================================
 */
+
+const brincandoComFor = [1];
+
+let soma = 0;
+
+for (let i = 0; i <= 1000; i++) {
+    brincandoComFor.push(i);
+    soma = soma + i;
+}
+
+const somaTudoEMultiplica = soma * brincandoComFor.length;
+console.log(`A soma de todos os números de 0 a 1000 é ${soma} e a multiplicação da soma pela quantidade de números é ${somaTudoEMultiplica}`);
 
