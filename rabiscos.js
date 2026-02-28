@@ -264,5 +264,99 @@ console.log(gets());
 print('Olá, mundo!');
 
 ===========================================
-*/
 
+Uma sala contem 5 alunos e para cada aluno foi sorteado um número de 1 a 100. Faça um programa que receba os números sorteados para cada aluno e imprima o número do aluno com o maior número sorteado.
+
+Dados de entrada:
+5
+50
+10
+98
+23
+
+Saída:
+98
+
+
+const numerosSorteados = [5, 50, 10, 98, 23];
+
+let maiorNumero = numerosSorteados[0];
+
+for (let i = 0; i <= numerosSorteados.length; i++) {
+    const numeroSorteado = numerosSorteados[i];
+    if (numeroSorteado > maiorNumero) {
+        maiorNumero = numeroSorteado;
+    }
+}
+
+console.log(maiorNumero);
+
+
+===========================================
+Faça um programa que receba a média de um aluno.
+Caso a média seja < 5, imprima "Reprovado"
+Caso a média seja >= 5 e < 7, imprima "Recuperação"
+Caso a média seja >= 7, imprima "Aprovado"
+
+
+const nota = [9, 6, 8, 5, 7];
+let soma = 0;
+
+for (let i = 0; i < nota.length; i++) {
+    const notaAtual = nota[i];
+    soma = soma + notaAtual;
+}
+
+const media = soma / nota.length;
+
+if (media < 5) {
+    console.log(`Este aluno está Reprovado, pelo motivo de estar com a média ${media.toFixed(2)}`);
+}
+else if (media >= 5 && media < 7) {
+    console.log(`Este aluno está em Recuperação, pelo motivo de estar com a média ${media.toFixed(2)}`);
+}
+else if (media >= 7) {
+    console.log(`Este aluno está Aprovado, o aluno finalizou com a média ${media.toFixed(2)}`);
+}
+
+===========================================
+Faça um programa que receba N (quantidade de numeros) e seus respectivos valores e Imprima o maior número par e o menor número impar.
+
+Exemplo de entrada:
+5
+3
+4
+1
+10
+8
+
+Saida:
+Maior número par: 10
+Menor número impar: 1
+
+
+const numeros = [5, 3, 4, 1, 10, 8];
+let maiorNumeroPar = (0);
+let menorNumeroImpar = (0);
+
+for (let i=0; i < numeros.length; i++) {
+    const numeroAtual = numeros[i];
+    if (numeroAtual % 2 === 0) {
+        if (numeroAtual > maiorNumeroPar || maiorNumeroPar === 0) {
+            maiorNumeroPar = numeroAtual;
+        }
+    }
+    else {
+        if (numeroAtual < menorNumeroImpar || menorNumeroImpar === 0) {
+            menorNumeroImpar = numeroAtual;
+        }
+    }
+}
+
+console.log(`Maior número par: ${maiorNumeroPar}`);
+console.log(`Menor número impar: ${menorNumeroImpar}`);
+
+
+
+===========================================
+*/
