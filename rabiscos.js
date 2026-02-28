@@ -180,7 +180,7 @@ luciano.calcularIMC();
 
 Array
 ===========================================
-*/
+
 
 const Pessoas = [
     {
@@ -202,3 +202,7 @@ function calcularIMC(pessoa) {
 }
 
 Pessoas.forEach(calcularIMC);
+
+===========================================
+*/
+
