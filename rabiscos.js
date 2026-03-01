@@ -377,4 +377,84 @@ console.log(`O salário líquido é R$ ${salarioFinal.toFixed(2)}, considerando 
 
 
 ===========================================
+
+
+//Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
+//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
+//- "print": imprime um texto de saída (output), pulando linha.
+
+
+let media = parseFloat(gets());
+
+if (media < 5) {
+  print('Reprovado');
+} else if (media < 7) {
+  print('Recuperação');
+} else {
+  print('Aprovado');
+}
+
+
+===========================================
+
+// IMPORTANTE: As funções "gets" e "print" são acessíveis globalmente, onde: 
+// - "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
+// - "print": imprime um texto de saída (output) e pula uma linha ("\n") automaticamente;
+
+const N = parseInt(gets(), 10);
+let maiorNumeroPar = 0;
+let menorNumeroImpar = 0;
+for (let i = 0; i < N; i++) {
+  const numero = parseInt(gets(), 10);
+
+  if (numero % 2 === 0) {
+    if (numero > maiorNumeroPar) {
+      maiorNumeroPar = numero;
+    }
+  } else {
+    if (numero < menorNumeroImpar || menorNumeroImpar === 0) {
+      menorNumeroImpar = numero ;
+    }
+  }
+}
+
+print(`Maior número par: ${maiorNumeroPar}`);
+print(`Menor número impar: ${menorNumeroImpar}`);
+
+
+===========================================
 */
+
+//Desafios JavaScript na DIO têm funções "gets" e "print" acessíveis globalmente:
+//- "gets" : lê UMA linha com dado(s) de entrada (inputs) do usuário;
+//- "print": imprime um texto de saída (output), pulando linha.
+
+//Função útil para o calculo do imposto (baseado nas aliquotas).
+
+function impostoSobreSoldo (salarioBruto) {
+    let imposto = 0;
+
+    if (salarioBruto  <= 1100.00) {
+        imposto = salarioBruto * 0.05;
+    } else if (salarioBruto >= 1100.01 && salarioBruto <= 2500.00) {
+        imposto = salarioBruto * 0.10;
+    } else {
+        imposto = salarioBruto * 0.15;
+    }
+
+    return imposto; 
+}
+
+function salarioLiquido (salarioBruto, imposto, adicionalBeneficios) {
+    return salarioBruto - imposto + adicionalBeneficios;
+}
+
+const salarioBruto = parseFloat(gets());
+const adicionalBeneficios = parseFloat(gets());
+
+const imposto = impostoSobreSoldo(salarioBruto);
+const salarioFinal = salarioLiquido(salarioBruto, imposto, adicionalBeneficios)
+
+
+const saida = salarioFinal;
+print(saida.toFixed(2));
